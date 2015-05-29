@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "objcCallSwift-swift.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    TestSwiftSample *tss = [TestSwiftSample alloc];
+    [tss Hello];
+    //NSLog(hello);
 }
 
 - (void)didReceiveMemoryWarning {

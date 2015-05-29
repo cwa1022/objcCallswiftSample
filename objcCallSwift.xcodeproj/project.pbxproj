@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		AE6DD82A1B1802DF003459FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6DD8291B1802DF003459FA /* main.m */; };
 		AE6DD82D1B1802DF003459FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6DD82C1B1802DF003459FA /* AppDelegate.m */; };
-		AE6DD8301B1802DF003459FA /* objcCallSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE6DD82E1B1802DF003459FA /* objcCallSwift.xcdatamodeld */; };
 		AE6DD8331B1802DF003459FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6DD8321B1802DF003459FA /* ViewController.m */; };
 		AE6DD8361B1802DF003459FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6DD8341B1802DF003459FA /* Main.storyboard */; };
 		AE6DD8381B1802DF003459FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE6DD8371B1802DF003459FA /* Images.xcassets */; };
 		AE6DD83B1B1802DF003459FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE6DD8391B1802DF003459FA /* LaunchScreen.xib */; };
 		AE6DD8471B1802DF003459FA /* objcCallSwiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6DD8461B1802DF003459FA /* objcCallSwiftTests.m */; };
+		AE6DD85C1B180F67003459FA /* TestSwiftSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DD85B1B180F67003459FA /* TestSwiftSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +33,6 @@
 		AE6DD8291B1802DF003459FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE6DD82B1B1802DF003459FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE6DD82C1B1802DF003459FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AE6DD82F1B1802DF003459FA /* objcCallSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = objcCallSwift.xcdatamodel; sourceTree = "<group>"; };
 		AE6DD8311B1802DF003459FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AE6DD8321B1802DF003459FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AE6DD8351B1802DF003459FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		AE6DD8401B1802DF003459FA /* objcCallSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = objcCallSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6DD8451B1802DF003459FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE6DD8461B1802DF003459FA /* objcCallSwiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcCallSwiftTests.m; sourceTree = "<group>"; };
+		AE6DD85B1B180F67003459FA /* TestSwiftSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSwiftSample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 				AE6DD8341B1802DF003459FA /* Main.storyboard */,
 				AE6DD8371B1802DF003459FA /* Images.xcassets */,
 				AE6DD8391B1802DF003459FA /* LaunchScreen.xib */,
-				AE6DD82E1B1802DF003459FA /* objcCallSwift.xcdatamodeld */,
 				AE6DD8271B1802DF003459FA /* Supporting Files */,
+				AE6DD85B1B180F67003459FA /* TestSwiftSample.swift */,
 			);
 			path = objcCallSwift;
 			sourceTree = "<group>";
@@ -222,10 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE6DD8301B1802DF003459FA /* objcCallSwift.xcdatamodeld in Sources */,
 				AE6DD82D1B1802DF003459FA /* AppDelegate.m in Sources */,
 				AE6DD8331B1802DF003459FA /* ViewController.m in Sources */,
 				AE6DD82A1B1802DF003459FA /* main.m in Sources */,
+				AE6DD85C1B180F67003459FA /* TestSwiftSample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,9 +353,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = objcCallSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "objcCallSwift/objcCallSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -363,9 +366,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = objcCallSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "objcCallSwift/objcCallSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -422,6 +427,7 @@
 				AE6DD84C1B1802DF003459FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE6DD84D1B1802DF003459FA /* Build configuration list for PBXNativeTarget "objcCallSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -430,21 +436,9 @@
 				AE6DD84F1B1802DF003459FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AE6DD82E1B1802DF003459FA /* objcCallSwift.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AE6DD82F1B1802DF003459FA /* objcCallSwift.xcdatamodel */,
-			);
-			currentVersion = AE6DD82F1B1802DF003459FA /* objcCallSwift.xcdatamodel */;
-			path = objcCallSwift.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AE6DD81C1B1802DF003459FA /* Project object */;
 }
